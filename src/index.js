@@ -10,8 +10,7 @@ import './index.css';
 
 class App extends React.Component {
   componentDidMount() {
-    axios.get('http://localhost:3000/users').then(res => {
-      console.log(res.data);
+    axios.get('https://randomuser.me/api/?page=1&results=10').then(res => {
       store.dispatch(addUsers(res.data.results));
     });
   }
